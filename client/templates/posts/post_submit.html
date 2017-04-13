@@ -1,0 +1,67 @@
+<!-- 新建模板-->
+<template name="postSubmit">
+    <form class="main form-inline">
+        <div class="col-sm-12 my-form-group">
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="company_name">企业名称*：</label>
+                <input name="company_name" id="company_name" type="text" value="{{company_name}}" required placeholder="企业名称" class="form-control insert-input"/>
+            </div>
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="social_code">统一社会信用代码*：</label>
+                {{#if social_code}}
+                    <input name="social_code" id="social_code" type="text" disabled value="{{social_code}}" placeholder="统一社会信用代码" class="form-control insert-input"/>
+                {{else}}
+                    <input name="social_code" id="social_code" type="text"  value="" placeholder="统一社会信用代码" class="form-control insert-input"/>
+                {{/if}}
+            </div>
+        </div>
+        <div class="col-sm-12 my-form-group">
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="registered_fund">注册资金（万）*：</label>
+                <input name="registered_fund" id="registered_fund" type="number" value="{{registered_fund}}" placeholder="注册资金" class="form-control insert-input"/>
+            </div>
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="address">注册地址*：</label>
+                <input name="address" id="address" type="text" value="{{address}}" placeholder="注册地址" class="form-control insert-input"/>
+            </div>
+        </div>
+        <div class="col-sm-12 my-form-group">
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="company_tel">企业联系电话*：</label>
+                <input name="company_tel" id="company_tel" type="text" value="{{company_tel}}" placeholder="企业联系电话" class="form-control insert-input"/>
+            </div>
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="legal_name">法定代表人姓名*：</label>
+                <input name="legal_name" id="legal_name" type="text" value="{{legal_name}}" placeholder="法定代表人姓名" class="form-control insert-input"/>
+            </div>
+        </div>
+        <div class="col-sm-12 my-form-group">
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="legal_id">法定代表人身份证*：</label>
+                <input name="legal_id" id="legal_id" type="text" value="{{legal_id}}" placeholder="法定代表人身份证" class="form-control insert-input"/>
+            </div>
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="legal_phone">法定代表人电话*：</label>
+                <input name="legal_phone" id="legal_phone" type="text" value="{{legal_phone}}" placeholder="法定代表人电话" class="form-control insert-input"/>
+            </div>
+        </div>
+        <div class="col-sm-12 my-form-group">
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="company_url">企业官网：</label>
+                <input name="company_url" id="company_url" type="text" value="{{company_url}}" placeholder="企业官网" class="form-control insert-input"/>
+            </div>
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="registered_date">注册日期*：</label>
+                <input name="registered_date" id="registered_date" type="date" value="{{registered_date}}" placeholder="注册日期" class="form-control insert-input"/>
+            </div>
+        </div>
+        <div class="text-center">
+            {{#if _id}}
+                <input type="button" id="update" value="保存修改" class="btn btn-primary "/>
+            {{else}}
+                <input type="button" id="add_new" value="新建" class="btn btn-primary "/>
+            {{/if}}
+            <input type="button" id="go_back" value="返回" class="btn btn-default "/>
+        </div>
+    </form>
+</template>

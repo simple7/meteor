@@ -1,0 +1,56 @@
+<!-- 查询模板-->
+<template name="postPage">
+    {{> postItem}}
+    <div class="main form-inline clearfix">
+        <div class="col-sm-12 my-form-group">
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="company_name">企业名称：</label>
+                <span name="company_name" id="company_name"  class="insert-input">{{company_name}}</span>
+            </div>
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="social_code">统一社会信用代码：</label>
+                <span name="social_code" id="social_code"  class="insert-input">{{social_code}}</span>
+            </div>
+        </div>
+        <div class="col-sm-12 my-form-group">
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="registered_fund">注册资金：</label>
+                <span name="registered_fund" id="registered_fund"  class="insert-input">{{registered_fund}}万</span>
+            </div>
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="address">注册地址：</label>
+                <span name="address" id="address"  class=" insert-input">{{address}}</span>
+            </div>
+        </div>
+        <div class="col-sm-12 my-form-group">
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="company_tel">企业联系电话：</label>
+                <span name="company_tel" id="company_tel" class="insert-input">{{company_tel}}</span>
+            </div>
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="legal_name">法定代表人姓名：</label>
+                <span name="legal_name" id="legal_name"  class="insert-input">{{legal_name}}</span>
+            </div>
+        </div>
+        <div class="col-sm-12 my-form-group">
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="legal_id">法定代表人身份证：</label>
+                <span name="legal_id" id="legal_id" class="insert-input">{{legal_id}}</span>
+            </div>
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="legal_phone">法定代表人电话：</label>
+                <span name="legal_phone" id="legal_phone"  class="insert-input">{{legal_phone}}</span>
+            </div>
+        </div>
+        <div class="col-sm-12 my-form-group">
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="company_url">企业官网：</label>
+                <span name="company_url" id="company_url" class="insert-input">{{company_url}}</span>
+            </div>
+            <div class="form-group col-sm-6">
+                <label class="control-label my-label" for="registered_date">注册日期：</label>
+                <span name="registered_date" id="registered_date" class="insert-input">{{registered_date}}</span>
+            </div>
+        </div>
+    </div>
+</template>

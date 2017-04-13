@@ -1,0 +1,29 @@
+<!-- 头部模板-->
+<template name="header">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{pathFor 'postsList'}}">Meteor入门Demo</a>
+            </div>
+            <div class="collapse navbar-collapse " id="navigation">
+                <ul class="nav navbar-nav">
+                    {{#if currentUser}}<li><a href="{{pathFor 'addNew'}}">新建</a></li>{{/if}}
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {{> loginButtons}}
+                </ul>
+                {{#if currentUser}}
+                    <div class="form-inline search-group">
+                        <div class="input-group ">
+                            <input type="text" id="search_input" class="form-control" aria-label="Text input with segmented button dropdown" required>
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-primary search-btn">搜索</button>
+                                <button type="button" class="btn btn-default search-reset">重置</button>
+                            </div>
+                        </div>
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+    </nav>
+</template>

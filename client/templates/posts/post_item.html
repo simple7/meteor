@@ -1,0 +1,28 @@
+<!-- 帖子模板-->
+<template name="postItem">
+    <div class="post">
+        <div class="post-content">
+            <h3>
+                <a href="{{company_url}}" target="_blank">{{company_name}}</a>
+                <span>地址：{{address}}</span>
+                <span>法人：{{legal_name}}</span>
+            </h3>
+            <span>
+                {{#if author}}添加by： {{author}}{{/if}}
+            </span>
+            <span>
+                {{#if submitted}}添加日期：{{getDate submitted}}{{/if}}
+            </span>
+            <span>
+                <!-- 如果是自己提交的则可以修改-->
+                {{#if ownPost}}<a href="{{pathFor 'postEdit'}}" class="post-edit">编辑</a>{{/if}}
+            </span>
+        </div>
+        {{#if checkIsDetail}}
+            <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">注册详情</a>
+        {{/if}}
+        {{#if ownPost}}
+            <a class="discuss btn btn-danger delete" href="#">删除</a>
+        {{/if}}
+    </div>
+</template>

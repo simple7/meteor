@@ -1,0 +1,12 @@
+<!-- 渲染帖子列表-->
+<template name="postsSearch">
+    {{#if posts}}
+        <div class="posts">
+        {{#each posts}}
+            {{> postItem}}
+        {{/each}}
+        </div>
+    {{else}}
+        <h3 class="noData">对不起，没有相关内容!</h3>
+    {{/if}}
+</template>
